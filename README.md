@@ -4,7 +4,7 @@ Learning about ES6/2015, the latest update for Javascript...
 ##### To install:
 - Serverside
   - run `npm install -g babel-core`
-  - add `require('babel-core)`
+  - add `require('babel-core)` to the index.js(already added in tut)
 - Clientside
   - run `npm install --save-dev babelify`
   - add to package.json `{
