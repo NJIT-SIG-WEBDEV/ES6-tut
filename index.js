@@ -1,13 +1,13 @@
 require("babel-core")
 
 
-//////////////////////////////////////////////////////////
+/////// LET VS VAR /////////////////
 // var type = 'Hello'
 //
 //
 //
 // while(true){
-//   let type = 'World'
+//   var type = 'World' //CHANGE TO LET TO SEE THE DIFFERENCE
 //   console.log(type);
 //   break
 // }
@@ -16,27 +16,7 @@ require("babel-core")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////
+//////////// CONSTANT VARIABLES //////////////////////
 // const PI = Math.PI
 //
 // PI = 123
@@ -44,44 +24,14 @@ require("babel-core")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////
+////////////// CLASSES ////////////////////////
 // class Bear {
 //   constructor(){
-//     let x = 2;
-//     let y = 5;
 //
 //     this.type = 'bear'
-//     this.x = x;
-//     this.y = y;
 //   }
 //   says(say){
 //     console.log(this.type + ' says ' + say);
-//   }
-//   logx(x){
-//     console.log(this.x);
 //   }
 // }
 //
@@ -89,36 +39,18 @@ require("babel-core")
 //   constructor(){
 //     super()
 //     this.type = 'grizzly'
-//     this.x = 3;
 //
 //   }
 // }
 // let bear = new Grizzly();
 // let bear = new Bear;
 // bear.says('growl')
-// function Bear(){
-//
-// }
-// // new Bear() class
-// // Bear() function
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////
+////////////// ARROW FUNCTIONS /////////////////////
 
 // let teams = ['Giants' , 'Jets' , 'Yankees'].filter(function(team){
 //   return team !== 'Yankees'
@@ -131,19 +63,14 @@ require("babel-core")
 
 
 
-
-
-
-
-
-//////////////////////////////////////////////////////////////////
+//////////////// ARROW FUNCTIONS - THIS ///////////////////////////////
 
 // class Bear {
 //   constructor(){
 //     this.type = 'bear'
 //   }
 //   says(say){
-//     setTimeout(function () {
+//     setTimeout( () => {
 //       console.log(this.type + ' says ' + say)
 //     }, 1000)
 //   }
@@ -154,7 +81,7 @@ require("babel-core")
 
 
 
-////////////////////////////////////////////////////////////////
+////////////////// TEMPLATE STRINGS /////////////////////
 
 // var team1 = 'Giants'
 // var team2 = 'Jets'
@@ -168,27 +95,33 @@ require("babel-core")
 //
 // var sentence = "I love " + team1 + " And " + team2 + " !"
 // console.log(sentence);
-//backticks
+// let sentence = `I love ${team1} and ${team2} !`
+// console.log(sentence);
 
-//////////////////////////////////////////////////////////////
+
+
+////////////// DECONSTRUCTORS ///////////////////////
 
 // let team1 = 'jets'
 // let team2 = 'giants'
-// let teams = {team1: team1, team2:team2}
+// var teams = {team1: team1, team2:team2} //native
+// console.log(teams);
+// let teams = {team1,team2} //es6
 // console.log(teams);
 
-//////////////////////////////////////////////////////////
+
+/////////////// DEFAULT PAPAMETERS ////////////////////
 //
-// function bear(type){
-//   //type = type || 'grizzly'
+// function bear(type = 'grizlly'){ //es6
+//   //type = type || 'grizzly' //native
 //   console.log(type);
 // }
 // bear();
 
 
-///////////////////////////////////////////////////////
+////////////// MULTIPLE PARAMETERS /////////////////
 //
-// function bears (types){
+// function bears (...types){
 //   console.log(types);
 // }
 // bears('polar' , 'grizzly');
